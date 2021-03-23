@@ -1,0 +1,41 @@
+## redis 配置
+datamiddleredis:
+  redisconfigs:
+    - service: service-query
+      host: 192.168.100.158
+      port: 6379
+      dbIndex: 2
+      dbType: ms  # ms 单点 cs 集群
+      passWord: 123456
+      maxTotal: 100
+      maxIdle: 10
+      maxWaitMillis: 1500
+      timeout: 10000
+    - service: service-modelEngine
+      host: 192.168.100.158
+      port: 6379
+      dbIndex: 2
+      dbType: ms  # ms 单点 cs 集群
+      passWord: 123456
+      maxTotal: 100
+      maxIdle: 10
+      maxWaitMillis: 1500
+      timeout: 10000
+      maxRedirects: 5
+      numTestsPerEvictionRun: 1024
+      blockWhenExhausted: false
+      timeBetweenEvictionRunsMillis: 30000
+      minEvictableIdleTimeMillis: 1800000
+      softMinEvictableIdleTimeMillis: 10000
+      hostPorts:
+        10.10.3.116:
+          - 7000
+          - 7001
+          - 7002
+          - 7003
+          - 7004
+          - 7005
+        10.10.3.117:
+          - 7006
+          - 7007
+          - 7008

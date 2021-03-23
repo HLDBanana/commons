@@ -1,0 +1,14 @@
+security:
+  cipher:
+    list:
+      - algorithm: AES
+        cipherIns: AES/CBC/PKCS5Padding
+        secretKey: 2B4BAF956F5E7F9DDEBB652981720217
+        vectorKey: 2B4BAF956A5E7F9D
+      - algorithm: DES
+        cipherIns: DES/CBC/PKCS5Padding
+        secretKey: 2B4BAF956F5E7F9D
+        vectorKey: 2B4BAF956A5E7F9D
+      - algorithm: RSA
+        cipherIns: RSA/ECB/PKCS1Padding
+        secureRandomSeed: TPCz0lDvTHybGMsHTJi3mJ7Pt48llJmRHb
